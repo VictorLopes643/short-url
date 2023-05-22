@@ -1,4 +1,3 @@
-
 # Short-URL
 
 
@@ -18,4 +17,10 @@ Short-URL is a link shortening service implemented using Golang, AWS CDK, AWS La
 * **AWS CDK**: AWS Cloud Development Kit (CDK) is used for infrastructure as code to define and deploy the necessary AWS resources.
 * **AWS Lambda**: AWS Lambda is a serverless computing service that executes code in response to events. In this project, it runs the backend logic for creating shortened URLs and handling redirects.
 * **API Gateway**: AWS API Gateway is a fully managed service that makes it easy to create, publish, maintain, monitor, and secure APIs at any scale. It acts as the entry point for accessing the Short-URL service.
-readme.so
+
+### Architecture Overview
+
+The Short-URL service follows a serverless architecture on AWS, leveraging various services to provide a scalable and highly available link shortening solution.
+
+https://app.diagrams.net/#G1_UM_ZRr0HVdkJ0-gOuBbwQSGTqMENDU9
+
