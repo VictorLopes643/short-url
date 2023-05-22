@@ -1,0 +1,13 @@
+{
+  "name": "front",
+  "private": true,
+  "workspaces": [
+    "cdk",
+    "go",
+    "front"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "victor lopes <victorlopes560@gmail.com>",
+  "license": "MIT"
+}
