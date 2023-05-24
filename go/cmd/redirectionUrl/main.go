@@ -35,7 +35,7 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 	if request.HTTPMethod == "OPTIONS" {
 		response := events.APIGatewayProxyResponse{
 			Headers: map[string]string{
-				"Access-Control-Allow-Origin":  "http://localhost:3000",
+				"Access-Control-Allow-Origin":  "*",
 				"Access-Control-Allow-Methods": "POST, OPTIONS",
 				"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
 				"Access-Control-Max-Age":       "3600",
@@ -114,7 +114,7 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 		response := events.APIGatewayProxyResponse{
 			Headers: map[string]string{
-				"Access-Control-Allow-Origin": "http://localhost:3000",  // Substitua pelo URL do seu front-end
+				"Access-Control-Allow-Origin": "*",  // Substitua pelo URL do seu front-end
 				"Content-Type":                "application/json",
 			},
 			StatusCode: 200,

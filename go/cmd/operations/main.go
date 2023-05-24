@@ -36,7 +36,7 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 		response := events.APIGatewayProxyResponse{
 			Headers: map[string]string{
-				"Access-Control-Allow-Origin":  "http://localhost:3000", 
+				"Access-Control-Allow-Origin":  "*", 
 				"Access-Control-Allow-Methods": "GET,OPTIONS,POST,DELETE",
 				"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
 				"Access-Control-Max-Age":       "3600",
@@ -61,7 +61,7 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 		// Construa o objeto de input para a operação de Scan
 		input := &dynamodb.ScanInput{
-			TableName: aws.String("URL-flv3xtxnhzgt3m7s5ut34eqj3q-dev"), // Substitua pelo nome da sua tabela
+			TableName: aws.String("URL-flv3xtxnhzgt3m7s5ut34eqj3q-dev"), 
 		}
 
 		// Execute a operação de Scan
@@ -78,7 +78,7 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		}
 			response := events.APIGatewayProxyResponse{
 				Headers: map[string]string{
-					"Access-Control-Allow-Origin": "http://localhost:3000",  // Substitua pelo URL do seu front-end
+					"Access-Control-Allow-Origin": "*", 
 					"Content-Type":                "application/json",
 				},
 				StatusCode: 200,
@@ -122,7 +122,7 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 		response := events.APIGatewayProxyResponse{
 			Headers: map[string]string{
-				"Access-Control-Allow-Origin": "http://localhost:3000",
+				"Access-Control-Allow-Origin": "*",
 				"Content-Type":                "application/json",
 			},
 			StatusCode: 200,
